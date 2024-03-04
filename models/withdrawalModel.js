@@ -5,9 +5,9 @@ const withdrawalSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
-    userId:{
-      type:String,
-      required:true
+    userId: {
+      type: String,
+      required: true,
     },
     approvedDate: {
       type: Date,
@@ -17,10 +17,15 @@ const withdrawalSchema = mongoose.Schema(
       enum: ["approved", "pending", "rejected"],
       default: "pending",
     },
-    wallet:{
-      type:String,
-      required:true
-    }
+    wallet: {
+      coin: {
+        type: String,
+      },
+      walletId: {
+        type: String,
+      },
+       
+    },
   },
   { timestamps: true }
 );

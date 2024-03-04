@@ -52,18 +52,12 @@ const UserModel = new Mongoose.Schema({
   },
   
 
-  walletId: [
-    {
-      walletType: {
-        type: String,
-        enum: ["bitcoin", "usdt", "litecoin", "dodgecoin"],
-        required: true,
-      },
-      walletAddress: {
-        type: String,
-        required: true,
-      },
-    },
-  ],
+  walletIds: {
+    ethereum:{type:String, default:"none" },
+    usdt:{type:String, default:"none" },
+    dogecoin:{type:String, default:"none" },
+    bitcoin:{type:String, default:"none" },
+  }
+  ,
 });
 module.exports=Mongoose.model("users",UserModel)

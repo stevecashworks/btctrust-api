@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
  const verify = (req, res, next) => {
   const { token } = req.headers;
+  console.log({token})
   jwt.verify(token, process.env.jwt_pass, (err, user) => {
     if (err) {
       console.log(err.message);

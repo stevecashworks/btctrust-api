@@ -7,7 +7,7 @@ const approveWithdrawal= async(req,res,next)=>{
     return res.status(200).json({success:true,result:approvedTransaction})
     }
     catch(err){
-        console.log(err.message)
+        console.log(err.message) 
         next(createCustomError(err.message))
     }
 }
