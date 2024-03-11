@@ -21,6 +21,11 @@ required:true
         type:String,
         enum:["pending", "approved", "rejected"],
         default:"pending"
+    },
+    plan:{
+        type:String,
+        enum:["starter", "premium", "ultimate", "corporate","exclusive", "standard"], 
+        required:true
     }
 }, {timestamps:true})
 module.exports= mongoose.model("investments",investmentSchema)
