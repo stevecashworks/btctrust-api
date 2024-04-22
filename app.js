@@ -15,7 +15,7 @@ server.use("/users", userRouter)
 server.use("/admin", adminRouter)
 server.use("/requests", requestRoute)
 server.get("/", (req,res)=>{
-  res.status(200).send("okay")
+  res.send("okay")
 }
           )
 server.use(handleError)
