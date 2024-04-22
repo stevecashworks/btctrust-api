@@ -14,6 +14,10 @@ server.use(express.json());
 server.use("/users", userRouter)
 server.use("/admin", adminRouter)
 server.use("/requests", requestRoute)
+server.get("/", (req,res)=>{
+  res.status(200).send("okay")
+}
+          )
 server.use(handleError)
 const mongo_uri=process.env.mongo_uri
 const port=process.env.port||5000
