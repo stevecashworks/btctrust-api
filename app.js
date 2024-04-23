@@ -18,7 +18,9 @@ server.use(handleError)
 const mongo_uri=process.env.mongo_uri
 const port=process.env.port||5000
 
-
+server.get("/",(req,res,next)=>{
+  res.status(200).send("developed by me")
+})
 
 
 
